@@ -193,7 +193,7 @@ console.log(inscripcionAPI);
 
         <div className="terminos-section">
           <a href="#" onClick={(e) => { e.preventDefault(); setMostrarTerminos(!mostrarTerminos); }}>
-            {mostrarTerminos ? 'Ocultar Términos y Condiciones' : 'Ver Términos y Condiciones'}
+            {mostrarTerminos ? 'Hide Terms and Conditions' : 'See Terms and Conditions'}
           </a>
 
           {mostrarTerminos && (
