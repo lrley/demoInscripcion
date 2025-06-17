@@ -158,3 +158,67 @@ input[type="checkbox"].input-focus + span {
   outline-offset: 3px;
   border-radius: 4px;
 }
+
+
+.submit-button {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+/* Teléfonos móviles (vertical y horizontal) */
+@media only screen and (max-width: 600px) {
+  /* Estilos específicos para teléfonos móviles */
+  .form-container {
+    padding: 20px;
+  }
+  .submit-button {
+    font-size: 14px;
+  }
+}
+
+/* Tabletas (vertical y horizontal) */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  /* Estilos específicos para tabletas */
+  .form-container {
+    padding: 25px;
+  }
+  .submit-button {
+    font-size: 15px;
+  }
+}
+
+/* Laptops pequeñas (13" y 14") */
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+  /* Estilos específicos para laptops pequeñas */
+  .form-container {
+    padding: 30px;
+  }
+  .submit-button {
+    font-size: 16px;
+  }
+}
+
+/* Laptops medianas (15") */
+@media only screen and (min-width: 1441px) and (max-width: 1600px) {
+  /* Estilos específicos para laptops medianas */
+  .form-container {
+    padding: 35px;
+  }
+  .submit-button {
+    font-size: 17px;
+  }
+}
+
+/* Laptops grandes (17" y 21") */
+@media only screen and (min-width: 1601px) {
+  /* Estilos específicos para laptops grandes */
+  .form-container {
+    padding: 40px;
+  }
+  .submit-button {
+    font-size: 18px;
+  }
+}
+
+
