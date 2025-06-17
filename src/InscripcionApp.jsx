@@ -129,12 +129,12 @@ console.log(inscripcionAPI);
 
   return (
     <div className="form-container">
-      <h1>Formulario de Inscripción a la Cancha</h1>
+      <h1>Court Booking Registration Form</h1>
       <form className="inscripcion-form" onSubmit={handleSubmit}>
         <input
           type="text"
           name="nombre"
-          placeholder="Nombre completo"
+          placeholder="Full Name"
           value={formData.nombre}
           onChange={handleChange}
           ref={inputRefs.nombre}
@@ -143,7 +143,7 @@ console.log(inscripcionAPI);
            <input
           type="text"
           name="documento"
-          placeholder="Documento"
+          placeholder="Document"
           value={formData.documento}
           onChange={handleChange}
           ref={inputRefs.documento}
@@ -152,7 +152,7 @@ console.log(inscripcionAPI);
         <input
           type="email"
           name="correo"
-          placeholder="Correo electrónico"
+          placeholder="Email"
           value={formData.correo}
           onChange={handleChange}
           ref={inputRefs.correo}
@@ -161,7 +161,7 @@ console.log(inscripcionAPI);
         <input
           type="tel"
           name="telefono"
-          placeholder="Teléfono"
+          placeholder="Phone"
           value={formData.telefono}
           onChange={handleChange}
           ref={inputRefs.telefono}
@@ -169,7 +169,7 @@ console.log(inscripcionAPI);
         />
 
         <label className="foto-label">
-          Foto (puede usar la cámara)
+          Photo (can use the camera)
           <input
             type="file"
             name="foto"
@@ -180,7 +180,7 @@ console.log(inscripcionAPI);
         </label>
 
         <button type="button" onClick={handleUsarCamara}>
-          Tomar foto con cámara
+         Take a photo with a camera
         </button>
 
         {usarCamara && <CameraCapture onCapture={handleCapture} />}
@@ -199,30 +199,20 @@ console.log(inscripcionAPI);
           {mostrarTerminos && (
             <div className="terminos-text">
               {/* Aquí va todo tu texto de términos y condiciones */}
-              <p><strong>Aceptación de Riesgos y Exención de Responsabilidad</strong></p>
-              <p>Al reservar y utilizar las instalaciones de [Nombre de tu Cancha], el usuario declara haber leído, entendido y aceptado los siguientes términos:</p>
-              <p><strong>Asunción de Riesgos</strong></p>
-              <p>El usuario reconoce y acepta que la práctica de deportes y actividades físicas puede implicar riesgos de lesiones físicas, daños materiales, e incluso la muerte...</p>
-                <p><strong>Exención de Responsabilidad</strong></p>
-              <p>
-                [Nombre de tu Cancha], sus propietarios, empleados, agentes y afiliados no serán responsables por ninguna lesión personal, daño material, pérdida, accidente, enfermedad, discapacidad, o cualquier otra situación adversa que pueda ocurrir antes, durante o después del uso de las instalaciones, sin importar la causa.
-              </p>
-              <p><strong>Renuncia a Reclamaciones</strong></p>
-              <p>
-                El usuario, en su nombre y en nombre de sus herederos, familiares, representantes legales y aseguradoras, renuncia expresamente a cualquier derecho a presentar reclamaciones, demandas, acciones legales o solicitudes de indemnización contra [Nombre de tu Cancha] por cualquier evento relacionado con el uso de las instalaciones.
-              </p>
-              <p><strong>Uso Responsable de la Cancha</strong></p>
-              <p>
-                El usuario se compromete a utilizar la cancha de manera responsable y a seguir todas las reglas y normativas establecidas por [Nombre de tu Cancha]. El incumplimiento de estas reglas podrá resultar en la terminación inmediata del derecho de uso sin reembolso.
-              </p>
-              <p><strong>Protección de Datos</strong></p>
-              <p>
-                Al registrarse, el usuario autoriza el uso de sus datos personales únicamente para fines administrativos y de comunicación relacionados con la reserva y uso de las instalaciones.
-              </p>
-              <p><strong>Aceptación de Términos</strong></p>
-              <p>
-                Al continuar con la inscripción o el alquiler de la cancha, el usuario declara que ha leído, entendido y acepta estos Términos y Condiciones y que lo hace de manera voluntaria y consciente, liberando a [Nombre de tu Cancha] de toda responsabilidad legal.
-              </p>
+             <p><strong>Acceptance of Risks and Disclaimer of Liability</strong></p>
+<p>By reserving and using the facilities of [Your Court Name], the user declares that they have read, understood, and accepted the following terms:</p>
+<p><strong>Assumption of Risks</strong></p>
+<p>The user acknowledges and accepts that engaging in sports and physical activities may involve risks of physical injury, property damage, or even death.</p>
+<p><strong>Disclaimer of Liability</strong></p>
+<p>[Your Court Name], its owners, employees, agents, and affiliates shall not be held responsible for any personal injury, property damage, loss, accident, illness, disability, or any other adverse situation that may occur before, during, or after using the facilities, regardless of the cause.</p>
+<p><strong>Waiver of Claims</strong></p>
+<p>The user, on their behalf and on behalf of their heirs, family members, legal representatives, and insurers, expressly waives any right to file claims, lawsuits, legal actions, or requests for compensation against [Your Court Name] for any event related to the use of the facilities.</p>
+<p><strong>Responsible Use of the Court</strong></p>
+<p>The user commits to using the court responsibly and adhering to all rules and regulations established by [Your Court Name]. Failure to comply with these rules may result in immediate termination of the right to use the facilities without refund.</p>
+<p><strong>Data Protection</strong></p>
+<p>By registering, the user authorizes the use of their personal data solely for administrative and communication purposes related to the reservation and use of the facilities.</p>
+<p><strong>Acceptance of Terms</strong></p>
+<p>By proceeding with the registration or rental of the court, the user declares that they have read, understood, and accept these Terms and Conditions voluntarily and knowingly, releasing [Your Court Name] from all legal liability.</p>
               {/* Agrega todo tu texto aquí */}
             </div>
           )}
@@ -240,12 +230,12 @@ console.log(inscripcionAPI);
                   onChange={handleChange}
                   required
                   />
-              <span>Acepto los Términos y Condiciones</span>
+              <span>I accept the Terms and Conditions</span>
             </label>
           </div>
 
         <button type="submit" className="submit-button">
-          Inscribirse
+          Register
         </button>
       </form>
     </div>
