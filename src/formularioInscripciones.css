@@ -69,7 +69,7 @@ body {
 .terminos-text {
   max-height: 250px;
   overflow-y: auto;
-  padding-right: 10px;
+  word-wrap: break-word;
 }
 
 .terminos-text p {
@@ -221,4 +221,31 @@ input[type="checkbox"].input-focus + span {
   }
 }
 
+input[type="checkbox"] {
+  -webkit-appearance: checkbox !important;
+  appearance: checkbox !important;
+}
 
+
+input[type="checkbox"] {
+  -webkit-appearance: checkbox !important;
+  appearance: checkbox !important;
+}
+
+
+.aceptacion-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.aceptacion-checkbox input {
+  margin-right: 8px;
+}
+
+.aceptacion-checkbox span {
+  font-size: 14px;
+  white-space: nowrap;
+}
