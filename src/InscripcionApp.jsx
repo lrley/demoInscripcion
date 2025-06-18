@@ -205,20 +205,20 @@ console.log(inscripcionAPI);
           {mostrarTerminos && (
             <div className="terminos-text">
               {/* Aquí va todo tu texto de términos y condiciones */}
-             <p><strong>Acceptance of Risks and Disclaimer of Liability</strong></p>
-<p>By reserving and using the facilities of [Your Court Name], the user declares that they have read, understood, and accepted the following terms:</p>
-<p><strong>Assumption of Risks</strong></p>
-<p>The user acknowledges and accepts that engaging in sports and physical activities may involve risks of physical injury, property damage, or even death.</p>
-<p><strong>Disclaimer of Liability</strong></p>
-<p>[Your Court Name], its owners, employees, agents, and affiliates shall not be held responsible for any personal injury, property damage, loss, accident, illness, disability, or any other adverse situation that may occur before, during, or after using the facilities, regardless of the cause.</p>
-<p><strong>Waiver of Claims</strong></p>
-<p>The user, on their behalf and on behalf of their heirs, family members, legal representatives, and insurers, expressly waives any right to file claims, lawsuits, legal actions, or requests for compensation against [Your Court Name] for any event related to the use of the facilities.</p>
-<p><strong>Responsible Use of the Court</strong></p>
-<p>The user commits to using the court responsibly and adhering to all rules and regulations established by [Your Court Name]. Failure to comply with these rules may result in immediate termination of the right to use the facilities without refund.</p>
-<p><strong>Data Protection</strong></p>
-<p>By registering, the user authorizes the use of their personal data solely for administrative and communication purposes related to the reservation and use of the facilities.</p>
-<p><strong>Acceptance of Terms</strong></p>
-<p>By proceeding with the registration or rental of the court, the user declares that they have read, understood, and accept these Terms and Conditions voluntarily and knowingly, releasing [Your Court Name] from all legal liability.</p>
+                <p><strong>Acceptance of Risks and Disclaimer of Liability</strong></p>
+                <p>By reserving and using the facilities of [Your Court Name], the user declares that they have read, understood, and accepted the following terms:</p>
+                <p><strong>Assumption of Risks</strong></p>
+                <p>The user acknowledges and accepts that engaging in sports and physical activities may involve risks of physical injury, property damage, or even death.</p>
+                <p><strong>Disclaimer of Liability</strong></p>
+                <p>[Your Court Name], its owners, employees, agents, and affiliates shall not be held responsible for any personal injury, property damage, loss, accident, illness, disability, or any other adverse situation that may occur before, during, or after using the facilities, regardless of the cause.</p>
+                <p><strong>Waiver of Claims</strong></p>
+                <p>The user, on their behalf and on behalf of their heirs, family members, legal representatives, and insurers, expressly waives any right to file claims, lawsuits, legal actions, or requests for compensation against [Your Court Name] for any event related to the use of the facilities.</p>
+                <p><strong>Responsible Use of the Court</strong></p>
+                <p>The user commits to using the court responsibly and adhering to all rules and regulations established by [Your Court Name]. Failure to comply with these rules may result in immediate termination of the right to use the facilities without refund.</p>
+                <p><strong>Data Protection</strong></p>
+                <p>By registering, the user authorizes the use of their personal data solely for administrative and communication purposes related to the reservation and use of the facilities.</p>
+                <p><strong>Acceptance of Terms</strong></p>
+                <p>By proceeding with the registration or rental of the court, the user declares that they have read, understood, and accept these Terms and Conditions voluntarily and knowingly, releasing [Your Court Name] from all legal liability.</p>
               {/* Agrega todo tu texto aquí */}
             </div>
           )}
@@ -231,9 +231,11 @@ console.log(inscripcionAPI);
                 <input type="checkbox" id="aceptaTerminos" name="aceptaTerminos" checked={formData.aceptaTerminos} onChange={handleChange} required/>
               <span>I accept the Terms and Conditions</span>
             </label>
-            {errors.aceptaTerminos && (
-                <div className="error-message">{errors.aceptaTerminos}</div>
-              )}
+              {
+                errors.aceptaTerminos && (
+                  <div className="error-message">{errors.aceptaTerminos}</div>
+                )
+              }
           </div>
 
         <button type="submit" className="submit-button">
