@@ -227,18 +227,11 @@ input[type="checkbox"] {
 }
 
 
-input[type="checkbox"] {
-  -webkit-appearance: checkbox !important;
-  appearance: checkbox !important;
-}
-
-
-.aceptacion-checkbox {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 15px;
-  cursor: pointer;
+.aceptacion-checkbox input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 8px;
 }
 
 .aceptacion-checkbox input {

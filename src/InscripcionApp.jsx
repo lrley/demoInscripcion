@@ -75,6 +75,12 @@ export const InscripcionApp = () => {
     if (!error) error = maxLength(formData.documento, 13, 'documento');
     if (error) errors.documento = error;
 
+    
+  // Validación del checkbox
+  if (!formData.aceptaTerminos) {
+    errors.aceptaTerminos = 'Debes aceptar los términos y condiciones.';
+  }
+
     setErrors(errors);
     return errors;
   };
@@ -222,16 +228,12 @@ console.log(inscripcionAPI);
 
           <div className="aceptacion-checkbox">
             <label htmlFor="aceptaTerminos" className="aceptacion-checkbox">
-                <input
-                  type="checkbox"
-                  id="aceptaTerminos"
-                  name="aceptaTerminos"
-                  checked={formData.aceptaTerminos}
-                  onChange={handleChange}
-                  required
-                  />
+                <input type="checkbox" id="aceptaTerminos" name="aceptaTerminos" checked={formData.aceptaTerminos} onChange={handleChange} required/>
               <span>I accept the Terms and Conditions</span>
             </label>
+            {errors.aceptaTerminos && (
+                <div className="error-message">{errors.aceptaTerminos}</div>
+              )}
           </div>
 
         <button type="submit" className="submit-button">
