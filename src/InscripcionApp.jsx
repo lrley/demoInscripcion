@@ -133,6 +133,11 @@ console.log(inscripcionAPI);
     resetForm();
   };
 
+  const handleCerrarCamara = () => {
+  setUsarCamara(false);
+  setPreviewFoto(null);
+  setFormData({ ...formData, foto: null });
+};
   return (
     <div className="form-container">
       <h1>Court Booking Registration Form</h1>
@@ -177,19 +182,22 @@ console.log(inscripcionAPI);
         <label className="foto-label">
           Photo (can use the camera)
           <input
-            type="file"
-            name="foto"
-            accept="image/*"
-            onChange={handleChange}
-            required={!previewFoto}
-          />
-        </label>
+           className="foto-input"
+           type="file"
+           name="foto"
+           accept="image/*"
+           onChange={handleChange}
+           required={!previewFoto}
+           />
+         </label>
 
-        <button type="button" onClick={handleUsarCamara}>
-         Take a photo with a camera
+        <button type="button" onClick={handleUsarCamara} className="button-foto">
+         Take a photo 
         </button>
 
-        {usarCamara && <CameraCapture onCapture={handleCapture} />}
+        {/*  {usarCamara && <CameraCapture onCapture={handleCapture} />}  */}
+        {usarCamara && <CameraCapture onCapture={handleCapture} onClose={handleCerrarCamara} />}
+      
 
         {previewFoto && (
           <div className="preview-container">

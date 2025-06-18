@@ -33,11 +33,6 @@ body {
   min-height: 80px;
 }
 
-.foto-label {
-  display: block;
-  margin-bottom: 10px;
-  font-weight: bold;
-}
 
 .preview-container {
   text-align: center;
@@ -115,6 +110,60 @@ body {
   transition: background-color 0.3s;
   margin-top: 20px;
 }
+
+.button-foto {
+  width: 20%;
+  padding: 12px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 5px;
+   margin-bottom: 20px;
+}
+
+h1 {
+  color: #2563eb !important;
+}
+.button-foto-captura {
+  width: 30%;
+  padding: 12px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 5px;
+   margin-bottom: 20px;
+}
+
+
+.foto-input {
+  width: 30%;
+  padding: 8px;
+   background-color: #d3d5d8; 
+  color: rgb(26, 24, 24);
+  border: none;
+  border-radius: 8px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 5px;
+   margin-bottom: 20px;
+}
+
+.foto-label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  
+}
+
 
 .submit-button:hover {
   background-color: #1d4ed8;

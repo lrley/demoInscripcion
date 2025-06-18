@@ -52,22 +52,22 @@ export const CameraCapture = ({ onCapture, onClose }) => {
     const imageData = canvas.toDataURL("image/png");
 
     if (onCapture) onCapture(imageData);
-    if (onClose) onClose();
+    //if (onClose) onClose();
   };
 
   return (
     <div className="camera-capture-container">
       <video
         ref={videoRef}
-        style={{ width: "100%", maxHeight: "300px" }}
+        style={{ width: "90%", maxHeight: "200px" }}
         playsInline
         muted
       />
-      <div style={{ marginTop: 10 }}>
-        <button type="button" onClick={capturePhoto}>
+      <div style={{ marginTop: 20, marginLeft: 120 }}>
+        <button type="button" onClick={capturePhoto} className="button-foto-captura">
           Capturar Foto
         </button>
-        <button type="button" onClick={onClose} style={{ marginLeft: 10 }}>
+        <button type="button" onClick={onClose} style={{ marginLeft: 10 }} className="button-foto-captura">
           Cerrar Cámara
         </button>
       </div>
