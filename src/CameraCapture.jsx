@@ -31,6 +31,7 @@ export const CameraCapture = ({ onCapture, onClose }) => {
 
     startCamera();
 
+    // ✅ Este cleanup es correcto y necesario
     return () => {
       if (streamRef.current) {
         streamRef.current.getTracks().forEach((track) => track.stop());
@@ -52,7 +53,7 @@ export const CameraCapture = ({ onCapture, onClose }) => {
     const imageData = canvas.toDataURL("image/png");
 
     if (onCapture) onCapture(imageData);
-    //if (onClose) onClose();
+    // Ya no cerramos la cámara aquí, la cierra el padre
   };
 
   return (
