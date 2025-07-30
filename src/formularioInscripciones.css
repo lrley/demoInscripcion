@@ -52,6 +52,7 @@ body {
   border: 1px solid #d1d5db;
   border-radius: 10px;
   background-color: #f9fafb;
+
 }
 
 .terminos-section h2 {
@@ -60,6 +61,18 @@ body {
   margin-bottom: 15px;
   text-align: center;
   
+}
+
+.terminos-section a {
+  text-decoration: none;
+  color: #01022e; /* O el color que prefieras */
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.terminos-section a:hover {
+  text-decoration: underline;
+  color: #374151;
 }
 
 .terminos-text {
@@ -81,6 +94,7 @@ body {
   justify-content: center;  /* centra horizontalmente */
   margin-top: 15px;
   cursor: pointer;
+  
 }
 
 .aceptacion-checkbox input {
