@@ -1,5 +1,5 @@
 body {
-  background-color: #f3f4f6;
+  background-color: #D8E0F0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -56,9 +56,10 @@ body {
 
 .terminos-section h2 {
   font-size: 20px;
-  color: #1f2937;
+  color: #01022e;
   margin-bottom: 15px;
   text-align: center;
+  
 }
 
 .terminos-text {
@@ -101,7 +102,7 @@ body {
 .submit-button {
   width: 100%;
   padding: 12px;
-  background-color: #2563eb;
+  background-color: #01022e;
   color: white;
   border: none;
   border-radius: 8px;
@@ -114,7 +115,7 @@ body {
 .button-foto {
   width: 20%;
   padding: 12px;
-  background-color: #2563eb;
+  background-color: #01022e;
   color: white;
   border: none;
   border-radius: 8px;
@@ -126,12 +127,12 @@ body {
 }
 
 h1 {
-  color: #2563eb !important;
+  color: #01022e !important;
 }
 .button-foto-captura {
   width: 30%;
   padding: 12px;
-  background-color: #2563eb;
+  background-color: #01022e;
   color: white;
   border: none;
   border-radius: 8px;
@@ -142,6 +143,14 @@ h1 {
    margin-bottom: 20px;
 }
 
+
+.button-foto:hover {
+  background-color: #62656eff;
+}
+
+.button-foto-captura:hover {
+  background-color: #62656eff;
+}
 
 .foto-input {
   width: 30%;
@@ -166,7 +175,7 @@ h1 {
 
 
 .submit-button:hover {
-  background-color: #1d4ed8;
+  background-color: #62656eff;
 }
 
 input,
@@ -203,7 +212,7 @@ textarea {
 
 /* Checkbox: poner borde azul al hacer foco */
 input[type="checkbox"].input-focus + span {
-  outline: 2px solid #007bff;
+  outline: 2px solid #01022e;
   outline-offset: 3px;
   border-radius: 4px;
 }

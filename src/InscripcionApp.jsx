@@ -237,7 +237,7 @@ export const InscripcionApp = () => {
 
 <p><strong>6. Protección y confidencialidad:</strong> Los datos personales tratados en este proceso estarán protegidos mediante medidas técnicas y administrativas adecuadas para garantizar su confidencialidad, integridad y uso legítimo.</p>
 
-<p><strong>7. Derechos del usuario:</strong> El usuario tiene derecho a acceder, rectificar o eliminar sus datos personales en cualquier momento, conforme a la legislación aplicable, contactando a la administración a través del correo: <a href="mailto:proyectos@dley.com.ec">proyectos@dley.com.ec</a>.</p>
+<p><strong>7. Derechos del usuario:</strong> El usuario tiene derecho a acceder, rectificar o eliminar sus datos personales en cualquier momento, conforme a la legislación aplicable, contactando a la administración a través del correo: <a href="mailto:soporte@dley.com.ec">soporte@dley.com.ec</a>.</p>
 
 <p><strong>8. Aceptación:</strong> Al continuar con el proceso de registro y marcar la opción de aceptación, el usuario declara haber leído, comprendido y aceptado estos Términos y Condiciones, y autoriza expresamente la captura y uso de su imagen para los fines indicados.</p></>
       
