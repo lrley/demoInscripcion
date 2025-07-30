@@ -152,12 +152,12 @@ export const InscripcionApp = () => {
 
   return (
     <div className="form-container">
-      <h1>Court Booking Registration Form</h1>
+      <h1>Inscripcion de Usuario</h1>
       <form className="inscripcion-form" onSubmit={handleSubmit}>
         <input
           type="text"
           name="nombre"
-          placeholder="Full Name"
+          placeholder="Nombres Completos"
           value={formData.nombre}
           onChange={handleChange}
           ref={inputRefs.nombre}
@@ -166,7 +166,7 @@ export const InscripcionApp = () => {
         <input
           type="text"
           name="documento"
-          placeholder="Document"
+          placeholder="Cedula"
           value={formData.documento}
           onChange={handleChange}
           ref={inputRefs.documento}
@@ -184,7 +184,7 @@ export const InscripcionApp = () => {
         <input
           type="tel"
           name="telefono"
-          placeholder="Phone"
+          placeholder="Telefono"
           value={formData.telefono}
           onChange={handleChange}
           ref={inputRefs.telefono}
@@ -192,7 +192,7 @@ export const InscripcionApp = () => {
         />
 
         <label className="foto-label">
-          Photo (can use the camera)
+          Foto (Usar Imagen de su Dispositivo)
           <input
             className="foto-input"
             type="file"
@@ -205,7 +205,7 @@ export const InscripcionApp = () => {
         </label>
 
         <button type="button" onClick={handleUsarCamara} className="button-foto">
-          Take a photo
+          Tomar Foto
         </button>
 
         {usarCamara && <CameraCapture onCapture={handleCapture} onClose={handleCerrarCamara} />}
@@ -218,13 +218,29 @@ export const InscripcionApp = () => {
 
         <div className="terminos-section">
           <a href="#" onClick={(e) => { e.preventDefault(); setMostrarTerminos(!mostrarTerminos); }}>
-            {mostrarTerminos ? 'Hide Terms and Conditions' : 'See Terms and Conditions'}
+            {mostrarTerminos ? 'Terminos y Condiciones' : 'Mostrar Terminos y Condiciones'}
           </a>
 
           {mostrarTerminos && (
             <div className="terminos-text">
-              {/* Aquí va todo tu texto de términos y condiciones */}
-              {/* ... */}
+             <><p><strong>AL ACEPTAR ESTOS TÉRMINOS, USTED AUTORIZA EXPRESAMENTE A LA APLICACIÓN A RECOLECTAR, ALMACENAR Y UTILIZAR SU INFORMACIÓN PERSONAL, INCLUIDA SU IMAGEN BIOMÉTRICA (FOTOGRAFÍA), CON FINES DE IDENTIFICACIÓN Y CONTROL DE ACCESO A LA CIUDADELA.</strong></p>
+
+<p><strong>1. Consentimiento para uso de datos personales:</strong> El usuario acepta que, al registrarse en la aplicación, proporciona voluntariamente sus datos personales, incluyendo nombre, número de cédula, correo electrónico, número de teléfono y una fotografía tomada desde la cámara del dispositivo.</p>
+
+<p><strong>2. Uso de imagen para control biométrico:</strong> Durante el proceso de inscripción, la aplicación capturará una fotografía del rostro del usuario. Esta imagen será utilizada únicamente para el reconocimiento facial en el sistema de control de acceso biométrico de la ciudadela o etapa residencial.</p>
+
+<p><strong>3. Acceso mediante identificación facial:</strong> Cuando el usuario se acerque al lector biométrico y se registre su rostro, el sistema verificará su identidad. Si la verificación es exitosa, se le concederá el acceso a la ciudadela.</p>
+
+<p><strong>4. Eliminación inmediata de la imagen:</strong> La imagen facial utilizada para el reconocimiento será <strong>eliminada automáticamente</strong> del sistema inmediatamente después de realizada la verificación. Esta imagen <strong>no será almacenada permanentemente</strong>, ni utilizada para ningún otro propósito.</p>
+
+<p><strong>5. Uso exclusivo para control de acceso:</strong> La imagen biométrica del usuario <strong>no será compartida, transferida ni utilizada con ningún fin externo</strong>, y se empleará únicamente para el control de ingreso a la ciudadela o etapa donde reside.</p>
+
+<p><strong>6. Protección y confidencialidad:</strong> Los datos personales tratados en este proceso estarán protegidos mediante medidas técnicas y administrativas adecuadas para garantizar su confidencialidad, integridad y uso legítimo.</p>
+
+<p><strong>7. Derechos del usuario:</strong> El usuario tiene derecho a acceder, rectificar o eliminar sus datos personales en cualquier momento, conforme a la legislación aplicable, contactando a la administración a través del correo: <a href="mailto:proyectos@dley.com.ec">proyectos@dley.com.ec</a>.</p>
+
+<p><strong>8. Aceptación:</strong> Al continuar con el proceso de registro y marcar la opción de aceptación, el usuario declara haber leído, comprendido y aceptado estos Términos y Condiciones, y autoriza expresamente la captura y uso de su imagen para los fines indicados.</p></>
+      
             </div>
           )}
         </div>
@@ -239,7 +255,7 @@ export const InscripcionApp = () => {
               onChange={handleChange}
               required
             />
-            <span>I accept the Terms and Conditions</span>
+            <span>Acepto los Terminos y condiciones</span>
           </label>
           {errors.aceptaTerminos && (
             <div className="error-message">{errors.aceptaTerminos}</div>
@@ -247,7 +263,7 @@ export const InscripcionApp = () => {
         </div>
 
         <button type="submit" className="submit-button">
-          Register
+          Registrar
         </button>
       </form>
     </div>
