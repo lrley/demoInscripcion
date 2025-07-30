@@ -43,14 +43,18 @@ export const CameraCapture = ({ onCapture, onClose }) => {
     if (!videoRef.current) return;
 
     const video = videoRef.current;
+
+
     const canvas = document.createElement("canvas");
-    canvas.width = video.videoWidth;
-    canvas.height = video.videoHeight;
+/*     canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight; */
+     canvas.width = 640;
+     canvas.height = 480;
 
     const ctx = canvas.getContext("2d");
     ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
 
-    const imageData = canvas.toDataURL("image/png");
+    const imageData = canvas.toDataURL("image/jpeg");
 
     if (onCapture) onCapture(imageData);
     // Ya no cerramos la cámara aquí, la cierra el padre
